@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/mari.css' %}">
+</head>
+
+<body>
+
+  <h1>{{title}}</h1>
+  <p>{{content}}</p>
+  <p>{{author}}</p>
+
+  <ol>
+    {% for i in fruits %}
+    <li>{{i}}</li>
+    {% endfor %}
+  </ol>
+
+  <div class="user-info">
+    <img src="{{user.photo}}" alt="User's photo">
+    <h1>{{user.name}}</h1>
+    <p>{{user.address.city}}</p>
+    <p>{{user.address.state}}</p>
+    <p>{{user.address.country}}</p>
+    <p>{{user.age}}</p>
+    <p>{{user.contact.email}}</p>
+    <p>{{user.contact.phone}}</p>
+  </div>
+
+</body>
+
+</html>
